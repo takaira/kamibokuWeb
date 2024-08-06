@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>神様、僕は気づいてしまった</title>
+    <meta name="description" content="神様、僕は気づいてしまった">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script>
+        window.onload = function(){
+
+            var menu_content = document.getElementsByClassName("menu-content")[0];
+            var menu_btn_check = document.getElementById("menu-btn-check");
+            var body = document.getElementsByTagName("body")[0];
+
+            // イベントハンドラ
+            menu_content.addEventListener('click', function(){
+                menu_btn_check.checked = false;
+                body.classList.remove("active");
+            }, false);
+
+            menu_btn_check.addEventListener('change', function(){
+                if (menu_btn_check.checked) {
+                    body.classList.add("active");
+                }
+                else {
+                    body.classList.remove("active");
+                }
+            })
+
+            // クリックイベントを発火
+            menu_content.click();
+
+            var $more_live = document.getElementById('more_live');
+            var $more_live_btn = document.getElementById('more_live_btn');
+            $more_live_btn.addEventListener('click', function() {
+                    //  クラスactiveがなかったら、activeを追加
+                if (!$more_live.classList.contains("active")) {
+                    $more_live.classList.add("active");
+                    $more_live_btn.textContent = "CLOSE";
+                } else {  //  フワッと消す時の処理
+                    $more_live.style = "opacity:0"; //  まずopacityで見えなくする
+                    setTimeout((e) => { //  0.5秒後にクラスactiveを削除
+                    $more_live.classList.remove("active");
+                    $more_live.style = "opacity:1";
+                    }, 500);
+                    $more_live_btn.textContent = "MORE";
+                }
+            })
+            var $more_media = document.getElementById('more_media');
+            var $more_media_btn = document.getElementById('more_media_btn');
+            $more_media_btn.addEventListener('click', function() {
+                    //  クラスactiveがなかったら、activeを追加
+                if (!$more_media.classList.contains("active")) {
+                    $more_media.classList.add("active");
+                    $more_media_btn.textContent = "CLOSE";
+                } else {  //  フワッと消す時の処理
+                    $more_media.style = "opacity:0"; //  まずopacityで見えなくする
+                    setTimeout((e) => { //  0.5秒後にクラスactiveを削除
+                    $more_media.classList.remove("active");
+                    $more_media.style = "opacity:1";
+                    }, 500);
+                    $more_media_btn.textContent = "MORE";
+                }
+            })
+        }
+    </script>
+</head>
+<body>
+    <div id="bgVideo_wrap">
+    </div>
+    <div id="home">
+        <header class="page-header wrapper">
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#discography">DISCOGRAPHY</a></li>
+                    <li><a href="#biography">BIOGRAPHY</a></li>
+                    <li><a href="#movie">MOVIE</a></li>
+                    <li><a href="#live">LIVE</a></li>
+                    <li><a href="#media">MEDIA</a></li>
+                    <li><a href="https://store.wmg.jp/collections/kamiboku" target="_blank" rel="noopener noreferrer">GOODS</a></li>
+                    <li><a href="https://wmg.jp/kamiboku/" target="_blank" rel="noopener noreferrer">NEWS</a></li>
+                </ul>
+            </nav>
+            <nav class="sns-nav">
+                <ul>
+                    <li><a href="https://twitter.com/_kamiboku" target="_blank" rel="noopener noreferrer"><img class="sns-icon" src="images/twitter-icon.png" alt></a></li>
+                    <li><a href="https://www.instagram.com/_kamiboku/" target="_blank" rel="noopener noreferrer"><img class="sns-icon" src="images/instagram-icon.png" alt></a></li>
+                </ul>
+            </nav>
+            <div class="hamburger-menu">
+                <input type="checkbox" id="menu-btn-check">
+                <label for="menu-btn-check" class="menu-btn"><span></span></label>
+                <!--ここからメニュー-->
+                <div class="menu-content">
+                    <ul>
+                        <li><a href="#">HOME</a></li>
+                        <li><a href="#discography">DISCOGRAPHY</a></li>
+                        <li><a href="#biography">BIOGRAPHY</a></li>
+                        <li><a href="#movie">MOVIE</a></li>
+                        <li><a href="#live">LIVE</a></li>
+                        <li><a href="#media">MEDIA</a></li>
+                        <li><a href="https://store.wmg.jp/collections/kamiboku">GOODS</a></li>
+                        <li><a href="https://wmg.jp/kamiboku/">NEWS</a></li>
+                    </ul>
+                </div>
+                <!--ここまでメニュー-->
+            </div>
+        </header>
+        <div id="home-img" class="home-content wrapper blink">
+            <img src="images/top-img.jpg" alt>
+            <a id="prologue-link" href="prologue.html">PROLOGUE ></a>
+        </div>
+        <div class="home-content wrapper">
+            <div class="slide-parent">
+                <div class="slide-container">
+                    <div class="slide-wrapper">
+                        <a class="slide" href="https://gekkansunday.net/work/3850/"  target="_blank" rel="noopener noreferrer">
+                            <img src="images/banner3.png" alt>
+                        </a>
+                        <a class="slide" href="https://www.instagram.com/_kamiboku/"  target="_blank" rel="noopener noreferrer">
+                            <img src="images/banner4.jpg" alt>
+                        </a>
+                        <a class="slide" href="https://kamiboku.lnk.to/Inochihadarenomono"  target="_blank" rel="noopener noreferrer">
+                            <img src="images/banner9.png" alt>
+                        </a>
+                        <a class="slide" href="https://youtu.be/d3A9879yJbo"  target="_blank" rel="noopener noreferrer">
+                            <img src="images/banner10.png" alt>
+                        </a>
+                        <a class="slide" href="https://shogakukan-comic.jp/book?isbn=9784098510078" target="_blank" rel="noopener noreferrer">
+                            <img src="images/banner8.png" alt>
+                        </a>
+                        <a class="slide" href="https://natalie.mu/comic/pp/kamiboku_comic" target="_blank" rel="noopener noreferrer">
+                            <img src="images/banner11.png" alt>
+                        </a>
+                        <a class="slide" href="https://youtu.be/TCwCC960Yl0" target="_blank" rel="noopener noreferrer">
+                            <img src="images/banner5.png" alt>
+                        </a>
+                        <a class="slide" href="https://youtu.be/Fb6kJDLbTeI" target="_blank" rel="noopener noreferrer">
+                            <img src="images/banner2.jpg" alt>
+                        </a>
+                    </div>
+                    <div class="slide-wrapper">
+                        <a class="slide" href="https://gekkansunday.net/work/3850/" target="_blank" rel="noopener noreferrer">
+                            <img src="images/banner3.png" alt>
+                        </a>
+                        <a class="slide" href="https://www.instagram.com/_kamiboku/" target="_blank" rel="noopener noreferrer">
+                            <img src="images/banner4.jpg" alt>
+                        </a>
+                        <a class="slide" href="https://kamiboku.lnk.to/Inochihadarenomono" target="_blank" rel="noopener noreferrer">
+                            <img src="images/banner9.png" alt>
+                        </a>
+                        <a class="slide" href="https://youtu.be/d3A9879yJbo" target="_blank" rel="noopener noreferrer">
+                            <img src="images/banner10.png" alt>
+                        </a>
+                        <a class="slide" href="https://shogakukan-comic.jp/book?isbn=9784098510078" target="_blank" rel="noopener noreferrer">
+                            <img src="images/banner8.png" alt>
+                        </a>
+                        <a class="slide" href="https://natalie.mu/comic/pp/kamiboku_comic" target="_blank" rel="noopener noreferrer">
+                            <img src="images/banner11.png" alt>
+                        </a>
+                        <a class="slide" href="https://youtu.be/TCwCC960Yl0" target="_blank" rel="noopener noreferrer">
+                            <img src="images/banner5.png" alt>
+                        </a>
+                        <a class="slide" href="https://youtu.be/Fb6kJDLbTeI" target="_blank" rel="noopener noreferrer">
+                            <img src="images/banner2.jpg" alt>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div id="discography" class="content">
+                <h2>DISCOGRAPHY</h2>
+                <ul class="disco-ul grid">
+                    <li class="disco-li">
+                        <a href="https://kamiboku.lnk.to/Inochihadarenomono" target="_blank" rel="noopener noreferrer">
+                            <div class="img_ac_disco">
+                                <img src="images/jk_Inochihadarenomono.jpg" alt="命は誰のもの">
+                            </div>
+                            <div class="txt_ac_disco">
+                                <p class="disco_tag"><span>DIGITAL</span></p>
+                                <p class="disco_tit">
+                                    命は誰のもの<br>
+                                    <small>&nbsp;</small>
+                                </p>
+                                <p class="disco_date">2022.<span>1</span>.<span>21</span>(Fri) Release!</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="disco-li">
+                        <a href="https://kamiboku.lnk.to/36o2NWq4" target="_blank" rel="noopener noreferrer">
+                            <div class="img_ac_disco">
+                                <img src="images/jk_seishun.jpg" alt="青春のふりをした">
+                            </div>
+                            <div class="txt_ac_disco">
+                                <p class="disco_tag"><span>DIGITAL</span></p>
+                                <p class="disco_tit">
+                                    青春のふりをした<br>
+                                    <small>&nbsp;</small>
+                                </p>
+                                <p class="disco_date">2021.<span>11</span>.<span>12</span>(Fri) Release!</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="disco-li">
+                        <a href="https://kamiboku.lnk.to/Panspermia" target="_blank" rel="noopener noreferrer">
+                            <div class="img_ac_disco">
+                                <img src="images/jk_panspermia.jpg" alt="パンスペルミア">
+                            </div>
+                            <div class="txt_ac_disco">
+                                <p class="disco_tag"><span>DIGITAL</span></p>
+                                <p class="disco_tit">
+                                    パンスペルミア<br>
+                                    <small>&nbsp;</small>
+                                </p>
+                                <p class="disco_date">2021.<span>6</span>.<span>11</span>(Fri) Release!</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="disco-li">
+                        <a href="https://kamiboku.lnk.to/bokutachino" target="_blank" rel="noopener noreferrer">
+                            <div class="img_ac_disco">
+                                <img src="images/jk_bokutachino.jpg" alt="僕たちの">
+                            </div>
+                            <div class="txt_ac_disco">
+                                <p class="disco_tag"><span>DIGITAL</span></p>
+                                <p class="disco_tit">
+                                    僕たちの<br>
+                                    <small>&nbsp;</small>
+                                </p>
+                                <p class="disco_date">2021.<span>5</span>.<span>7</span>(Fri) Release!</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="disco-li">
+                        <a href="https://kamiboku.lnk.to/InnerCircle" target="_blank" rel="noopener noreferrer">
+                            <div class="img_ac_disco">
+                                <img src="images/jk_inner.jpg" alt="インナーサークル">
+                            </div>
+                            <div class="txt_ac_disco">
+                                <p class="disco_tag"><span>DIGITAL</span></p>
+                                <p class="disco_tit">
+                                    インナーサークル<br>
+                                    <small>&nbsp;</small>
+                                </p>
+                                <p class="disco_date">2020.<span>6</span>.<span>24</span>(Wed) Release!</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="disco-li">
+                        <a href="https://kamiboku.lnk.to/7tO5b" target="_blank" rel="noopener noreferrer">
+                            <div class="img_ac_disco">
+                                <img src="images/jk_ao.jpg" alt="名前のない青">
+                            </div>
+                            <div class="txt_ac_disco">
+                                <p class="disco_tag"><span>DIGITAL</span></p>
+                                <p class="disco_tit">
+                                    名前のない青<br>
+                                    <small>&nbsp;</small>
+                                </p>
+                                <p class="disco_date">2020.<span>1</span>.<span>10</span>(Fri) Release!</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="disco-li">
+                        <a href="https://wmg.jp/kamiboku/discography/20702/" target="_blank" rel="noopener noreferrer">
+                            <div class="img_ac_disco">
+                                <img src="images/jk_20xx-lim.jpg" alt="20XX">
+                            </div>
+
+                            <div class="txt_ac_disco">
+                                <p class="disco_tag"><span>ALBUM</span></p>
+                                <p class="disco_tit">
+                                    20XX<br>
+                                    <small>初回限定盤(CD＋DVD)</small>
+                                </p>
+                                <p class="disco_date">2019.<span>5</span>.<span>15</span>(Wed) Release!</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="disco-li">
+                        <a href="https://wmg.jp/kamiboku/discography/20703/" target="_blank" rel="noopener noreferrer">
+                            <div class="img_ac_disco">
+                                <img src="images/jk_20xx.jpg" alt="20XX">
+                            </div>
+
+                            <div class="txt_ac_disco">
+                                <p class="disco_tag"><span>ALBUM</span></p>
+                                <p class="disco_tit">
+                                    20XX<br>
+                                    <small>(通常盤)</small>
+                                </p>
+                                <p class="disco_date">2019.<span>5</span>.<span>15</span>(Wed) Release!</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="disco-li">
+                        <a href="https://wmg.jp/kamiboku/discography/19876/" target="_blank" rel="noopener noreferrer">
+                            <div class="img_ac_disco">
+                                <img src="images/jk_ss-lim.jpg" alt="ストレイシープ">
+                            </div>
+
+                            <div class="txt_ac_disco">
+                                <p class="disco_tag"><span>SINGLE</span></p>
+                                <p class="disco_tit">
+                                    ストレイシープ／匿名<br>
+                                    <small>(初回限定盤)</small>
+                                </p>
+                                <p class="disco_date">2018.<span>10</span>.<span>17</span>(Wed) Release!</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="disco-li">
+                        <a href="https://wmg.jp/kamiboku/discography/19877/" target="_blank" rel="noopener noreferrer">
+                            <div class="img_ac_disco">
+                                <img src="images/jk_ss-nor.jpg" alt="ストレイシープ">
+                            </div>
+
+                            <div class="txt_ac_disco">
+                                <p class="disco_tag"><span>SINGLE</span></p>
+                                <p class="disco_tit">
+                                    ストレイシープ／匿名<br>
+                                    <small>(通常盤)</small>
+                                </p>
+                                <p class="disco_date">2018.<span>10</span>.<span>17</span>(Wed) Release!</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="disco-li">
+                        <a href="https://kamiboku.lnk.to/unhappyclub" target="_blank" rel="noopener noreferrer">
+                            <div class="img_ac_disco">
+                                <img src="images/jk_unhappy_club.jpeg" alt="UNHAPPY CLUB">
+                            </div>
+                            <div class="txt_ac_disco">
+                                <p class="disco_tag"><span>DIGITAL</span></p>
+                                <p class="disco_tit">
+                                    UNHAPPY CLUB<br>
+                                </p>
+                                <p class="disco_date">2018.<span>7</span>.<span>20</span>(Wed) Release!</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="disco-li">
+                        <a href="https://wmg.jp/kamiboku/discography/18438/" target="_blank" rel="noopener noreferrer">
+                            <div class="img_ac_disco">
+                                <img src="images/jk_lim02_b.jpg" alt="神様、僕は気づいてしまった">
+                            </div>
+
+                            <div class="txt_ac_disco">
+                                <p class="disco_tag"><span>ALBUM</span></p>
+                                <p class="disco_tit">
+                                    神様、僕は気づいてしまった<br>
+                                    <small>(初回限定盤)</small>
+                                </p>
+                                <p class="disco_date">2017.<span>7</span>.<span>26</span>(Wed) Release!</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="disco-li">
+                        <a href="https://wmg.jp/kamiboku/discography/18439/" target="_blank" rel="noopener noreferrer">
+                            <div class="img_ac_disco">
+                                <img src="images/jk_nor02_b.jpg" alt="神様、僕は気づいてしまった">
+                            </div>
+                            <div class="txt_ac_disco">
+                                <p class="disco_tag"><span>ALBUM</span></p>
+                                <p class="disco_tit">
+                                    神様、僕は気づいてしまった<br>
+                                    <small>(通常盤)</small>
+                                </p>
+                                <p class="disco_date">2017.<span>7</span>.<span>26</span>(Wed) Release!</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="disco-li">
+                        <a href="https://wmg.jp/kamiboku/discography/18067/" target="_blank" rel="noopener noreferrer">
+                            <div class="img_ac_disco">
+                                <img src="images/jk_lim_b.jpg" alt="CQCQ">
+                            </div>
+                            <div class="txt_ac_disco">
+                                <p class="disco_tag"><span>SINGLE</span></p>
+                                <p class="disco_tit">
+                                    CQCQ<br>
+                                    <small>(初回限定盤)</small>
+                                </p>
+                                <p class="disco_date">2017.<span>5</span>.<span>31</span>(Wed) Release!</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="disco-li">
+                        <a href="https://wmg.jp/kamiboku/discography/18068/" target="_blank" rel="noopener noreferrer">
+                            <div class="img_ac_disco">
+                                <img src="images/jk_nor_b.jpg" alt="CQCQ">
+                            </div>
+                            <div class="txt_ac_disco">
+                                <p class="disco_tag"><span>SINGLE</span></p>
+                                <p class="disco_tit">
+                                    CQCQ<br>
+                                    <small>(通常盤)</small>
+                                </p>
+                                <p class="disco_date">2017.<span>5</span>.<span>31</span>(Wed) Release!</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div><!-- /#discography -->
+            <div id="biography" class="content">
+                <h2>BIOGRAPHY</h2>
+                <img src="images/img_bio.png" alt>
+            </div><!-- /#biography -->
+            <div id="movie" class="content">
+                <h2>MOVIE</h2>
+                <ul class="movie-ul grid">
+                    <li class="movie-li">
+                        <a href="https://youtu.be/d3A9879yJbo" target="_blank" rel="noopener noreferrer">
+                            <img src="images/inochihadarenomono.jpg" alt>
+                        </a>
+                    </li>
+                    <li class="movie-li">
+                        <a href="https://youtu.be/TCwCC960Yl0" target="_blank" rel="noopener noreferrer">
+                            <img src="images/seisyunnohuriwosita.jpg" alt>
+                        </a>
+                    </li>
+                    <li class="movie-li">
+                        <a href="https://youtu.be/Fb6kJDLbTeI" target="_blank" rel="noopener noreferrer">
+                            <img src="images/pansuperumia.jpg" alt>
+                        </a>
+                    </li>
+                    <li class="movie-li">
+                        <a href="https://youtu.be/2oV2gS_RhS4" target="_blank" rel="noopener noreferrer">
+                            <img src="images/bokutachino.jpg" alt>
+                        </a>
+                    </li>
+                    <li class="movie-li">
+                        <a href="https://youtu.be/gauEUNi0X_U" target="_blank" rel="noopener noreferrer">
+                            <img src="images/ao.jpg" alt>
+                        </a>
+                    </li>
+                    <li class="movie-li">
+                        <a href="https://youtu.be/oPLE14dZbh4" target="_blank" rel="noopener noreferrer">
+                            <img src="images/deadlock.jpg" alt>
+                        </a>
+                    </li>
+                    <li class="movie-li">
+                        <a href="https://youtu.be/4aSypNeotZk" target="_blank" rel="noopener noreferrer">
+                            <img src="images/20xx.jpg" alt>
+                        </a>
+                    </li>
+                    <li class="movie-li">
+                        <a href="https://youtu.be/44-MU70bZ-g" target="_blank" rel="noopener noreferrer">
+                            <img src="images/mv_52hz.jpg" alt>
+                        </a>
+                    </li>
+                    <li class="movie-li">
+                        <a href="https://youtu.be/HOTvkCS-vFg" target="_blank" rel="noopener noreferrer">
+                            <img src="images/mv_cqcq-live.jpg" alt>
+                        </a>
+                    </li>
+                    <li class="movie-li">
+                        <a href="https://youtu.be/u8YxjrKcDlQ" target="_blank" rel="noopener noreferrer">
+                            <img src="images/mv_streiseep.jpg" alt>
+                        </a>
+                    </li>
+                    <li class="movie-li">
+                        <a href="https://youtu.be/wMOku75H76Y" target="_blank" rel="noopener noreferrer">
+                            <img src="images/mv_unhappy.jpg" alt>
+                        </a>
+                    </li>
+                    <li class="movie-li">
+                        <a href="https://youtu.be/7rvUbF4DlFg" target="_blank" rel="noopener noreferrer">
+                            <img src="images/mv_melci.jpg" alt>
+                        </a>
+                    </li>
+                    <li class="movie-li">
+                        <a href="https://youtu.be/FkpJ7ldblxY" target="_blank" rel="noopener noreferrer">
+                            <img src="images/mv_tokio.jpg" alt>
+                        </a>
+                    </li>
+                    <li class="movie-li">
+                        <a href="https://youtu.be/YShUwrlc2kM" target="_blank" rel="noopener noreferrer">
+                            <img src="images/mv_watashinoinochi02.jpg" alt>
+                        </a>
+                    </li>
+                    <li class="movie-li">
+                        <a href="https://youtu.be/Ayqq7qSOxV8" target="_blank" rel="noopener noreferrer">
+                            <img src="images/mv_cqcq.jpg" alt>
+                        </a>
+                    </li>
+                    <li class="movie-li">
+                        <a href="https://youtu.be/VzdyH6gmpSo" target="_blank" rel="noopener noreferrer">
+                            <img src="images/mv_kamiboku02.jpg" alt>
+                        </a>
+                    </li>
+                    <li class="movie-li">
+                        <a href="https://youtu.be/AVolBc6XmBs" target="_blank" rel="noopener noreferrer">
+                            <img src="images/mv_kamiboku.jpg" alt>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div id="live">
+                <h2>LIVE</h2>
+                <div>
+                    <a href="https://www.ntv.co.jp/buzzrhythm/live2019/" target="_blank" rel="noopener noreferrer">
+                        <div class="flex live-col">
+                            <img class="td_img" src="images/img_live06.png" alt="MEDIA">
+                            <p class="td_txt date">2019.11.9-10<span>BUZZ RHYTHM LIVE'19</span></p>
+                        </div>
+                    </a>
+                </div>
+                <div id="more_live" class="more_live">
+                    <div>
+                        <a href="https://www.summersonic.com/2019/" target="_blank" rel="noopener noreferrer">
+                            <div class="flex live-col">
+                                <img class="td_img" src="images/img_live05.png" alt="MEDIA">
+                                <p class="td_txt date">2019.8.16-18<span>SUMMER SONIC 2019</span></p>
+                            </div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://twitter.com/_kamiboku/status/1137328785513013256?s=20" target="_blank" rel="noopener noreferrer">
+                            <div class="flex live-col">
+                                <img class="td_img" src="images/img_live07.png" alt="MEDIA">
+                                <p class="td_txt date">2019.6.4　2019.6.7　2019.6.8<span>1st Tour "From 20XX"</span></p>
+                            </div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://www.summersonic.com/history/2018.html" target="_blank" rel="noopener noreferrer">
+                            <div class="flex live-col">
+                                <img class="td_img" src="images/img_live04.png" alt="MEDIA">
+                                <p class="td_txt date">2018.8.18-19<span>SUMMER SONIC 2018</span></p>
+                            </div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://countdownjapan.jp/1718/" target="_blank" rel="noopener noreferrer">
+                            <div class="flex live-col">
+                                <img class="td_img" src="images/img_live03.png" alt="MEDIA">
+                                <p class="td_txt date">2017.12.28-31<span>COUNTDOWN JAPAN 17/18</span></p>
+                            </div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://www.summersonic.com/history/2017.html" target="_blank" rel="noopener noreferrer">
+                            <div class="flex live-col">
+                                <img class="td_img" src="images/img_live02.png" alt="MEDIA">
+                                <p class="td_txt date">2017.8.19-20<span>SUMMER SONIC 2017</span></p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <button id="more_live_btn" class="more_btn fadein scrolling">MORE</button>
+            </div><!--/#live-->
+            <div id="media">
+                <h2>MEDIA</h2>
+                <div class="media-wrapper">
+                    <a href="https://natalie.mu/comic/pp/kamiboku_comic" target="_blank" rel="noopener noreferrer">
+                        <div class="flex media-col">
+                            <div class="media-img">
+                                <img src="images/img_media09.png" alt="MEDIA">
+                            </div>
+                            <div class="media_txt">
+                                <div class="media_txt_head cf_og">
+                                    <span class="tag">特集</span>
+                                    <p class="date">2022.01.21</p>
+                                </div>
+                                <h3>“僕”、そして我々は何に気づいたのか 素性不明のロックバンドがマンガで伝えたかったこと</h3>
+                                 <p class="desc">
+                                    「コミックナタリー」
+                                </p>
+                        
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div id="more_media" class="more_media">
+                    <div class="media-wrapper">
+                        <a href="https://deathcometrue.com/" target="_blank" rel="noopener noreferrer">
+                            <div class="flex media-col">
+                                <div class="media-img">
+                                    <img src="images/img_media08.png" alt="MEDIA">
+                                </div>
+                                <div class="media_txt">
+                                    <div class="media_txt_head cf_og">
+                                        <span class="tag">GAME</span>
+                                        <p class="date">2020.02.06</p>
+                                    </div>
+                                    <h3>インタラクティブムービー【Death Come True】(デスカムトゥルー)主題歌</h3>
+                                    <p class="desc">
+                                        「インナーサークル」
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="media-wrapper">
+                        <a href="http://eizouken-anime.com/" target="_blank" rel="noopener noreferrer">
+                            <div class="flex media-col">
+                                <div class="media-img">
+                                    <img src="images/img_media07.png" alt="MEDIA">
+                                </div>
+                                <div class="media_txt">
+                                    <div class="media_txt_head cf_og">
+                                        <span class="tag">TV</span>
+                                        <p class="date">2019.11.26</p>
+                                    </div>
+                                    <h3>TVアニメ 『映像研には手を出すな！』エンディングテーマ</h3>
+                                    <p class="desc">
+                                        「名前のない青」
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="media-wrapper">
+                        <a href="https://www.ntv.co.jp/buzzrhythm/" target="_blank" rel="noopener noreferrer">
+                            <div class="flex media-col">
+                                <div class="media-img">
+                                    <img src="images/img_media06.png" alt="MEDIA">
+                                </div>
+                                <div class="media_txt">
+                                    <div class="media_txt_head cf_og">
+                                        <span class="tag">TV</span>
+                                        <p class="date">2019.05.08</p>
+                                    </div>
+                                    <h3>日本テレビ系「バズリズム02」5月エンディングテーマ</h3>
+                                    <p class="desc">
+                                        「20XX」
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="media-wrapper">
+                        <a href="https://www.tv-tokyo.co.jp/zerogakari3/" target="_blank" rel="noopener noreferrer">
+                            <div class="flex media-col">
+                                <div class="media-img">
+                                    <img src="images/img_media05.png" alt="MEDIA">
+                                </div>
+                                <div class="media_txt" style="padding: 0 2%;">
+                                    <div class="media_txt_head cf_og">
+                                        <span class="tag">TV</span>
+                                        <p class="date">2018.07.05</p>
+                                    </div>
+                                    <h3>金曜８時のドラマ<br>
+                                        「警視庁ゼロ係〜生活安全課なんでも相談室〜 ＴＨＩＲＤ ＳＥＡＳＯＮ」（毎週金曜夜8時〜8時54分）</h3>
+                                    <p class="desc">
+                                        「UNHAPPY CLUB」
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="media-wrapper">
+                        <a href="http://ozland.jp/" target="_blank" rel="noopener noreferrer">
+                            <div class="flex media-col">
+                                <div class="media-img">
+                                    <img src="images/img_media04.png" alt="MEDIA">
+                                </div>
+                                <div class="media_txt">
+                                    <div class="media_txt_head cf_og">
+                                        <span class="tag">MOVIE</span>
+                                        <p class="date">2018.06.28</p>
+                                    </div>
+                                    <h3>2018年秋、TOHOシネマズ日比谷ほか全国ロードショー<br>
+                                        「オズランド　笑顔の魔法おしえます。」挿入歌</h3>
+                                    <p class="desc">
+                                        「ストレイシープ」「匿名」
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="media-wrapper">
+                        <a href="http://www.tbs.co.jp/anasore/" target="_blank" rel="noopener noreferrer">
+                            <div class="flex media-col">
+                                <div class="media-img">
+                                    <img src="images/img_media03.png" alt="MEDIA">
+                                </div>
+                                <div class="media_txt">
+                                    <div class="media_txt_head cf_og">
+                                        <span class="tag">TV</span>
+                                        <p class="date">2017.03.15</p>
+                                    </div>
+                                    <h3>TBS 火曜ドラマ『あなたのことはそれほど』(毎週火曜よる10:00～10:54) 主題歌</h3>
+                                    <p class="desc">
+                                        「CQCQ」
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="media-wrapper">
+                        <a href="https://www.coamix.co.jp/anime-chiruran/" target="_blank" rel="noopener noreferrer">
+                            <div class="flex media-col">
+                                <div class="media-img">
+                                    <img src="images/img_media02.png" alt="MEDIA">
+                                </div>
+                                <div class="media_txt">
+                                    <div class="media_txt_head cf_og">
+                                        <span class="tag">TV</span>
+                                        <p class="date">2016.12.10</p>
+                                    </div>
+                                    <h3>2017年1月9日（月）スタート TVアニメ「ちるらん にぶんの壱」主題歌</h3>
+                                    <p class="desc">
+                                        「僕の手に触れるな」
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="media-wrapper">
+                        <a href="https://www.jp.square-enix.com/soa/" target="_blank" rel="noopener noreferrer">
+                            <div class="flex media-col">
+                                <div class="media-img">
+                                    <img src="images/img_media01.png" alt="MEDIA">
+                                </div>
+                                <div class="media_txt">
+                                    <div class="media_txt_head cf_og">
+                                        <span class="tag">MEDIA</span>
+                                        <span class="tag">GAME</span>
+                                        <p class="date">2016.11.28</p>
+                                    </div>
+                                    <h3>初MV『だから僕は不幸に縋っていました』解禁！<br>
+                                        SQUARE ENIX「スターオーシャン：アナムネシス」主題歌
+                                    </h3>
+                                    <p class="desc">
+                                        「だから僕は不幸に縋っていました」
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <button id="more_media_btn" class="more_btn fadein scrolling">MORE</button>
+            </div>
+        </div><!-- /.home-content -->
+        <footer>    
+            <p class="copyrights">© Warner Music Japan Inc.</p>
+        </footer>
+    </div><!-- /#home -->
+</body>
+</html>
